@@ -1,0 +1,69 @@
+// Global
+html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  height: 100%;
+
+  > .app {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+
+    main {
+      flex: 1;
+    }
+  }
+}
+
+main {
+  margin: auto;
+  width: 100%;
+}
+
+.initial-loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+
+  .initial-message {
+    color: lightgray;
+    font-weight: bold;
+  }
+
+  > .loader {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+  }
+}
